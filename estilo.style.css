@@ -45,25 +45,45 @@ nav a:hover {
 
 .busca {
   position: relative;
-  width: 350px;
-  margin: 20px auto;
+  width: 400px;
+  margin: 30px auto;
 }
 
 .busca input {
   width: 100%;
-  padding: 12px 12px 12px 40px;
-  border-radius: 25px;
-  border: 1px solid #ccc;
+  padding: 14px 20px 14px 45px;
+  border-radius: 30px;
+  border: 2px solid transparent;
   outline: none;
+  font-size: 16px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.busca input:focus {
+  border: 2px solid #ff7a00;
+  box-shadow: 0 6px 18px rgba(255, 122, 0, 0.3);
+  transform: scale(1.03);
 }
 
 .lupa {
   position: absolute;
-  left: 12px;
+  left: 18px;
   top: 50%;
   transform: translateY(-50%);
   font-size: 18px;
-  pointer-events: none;
+  color: #999;
+  transition: 0.3s;
+}
+
+.busca input:focus + .lupa {
+  color: #ff7a00;
+}
+
+.busca input::placeholder {
+  color: #aaa;
+  font-style: italic;
 }
 
 /* PRODUTOS */
